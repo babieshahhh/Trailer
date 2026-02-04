@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>just a cute site 🎀</title>
+
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffd6e8, #ffeef7);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .container {
+    padding: 24px;
+    max-width: 420px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    color: #ff4d88;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #ff6fa5;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  button {
+    background: #fff;
+    border: 2px solid #ff9ecb;
+    border-radius: 18px;
+    padding: 14px;
+    font-size: 0.9rem;
+    color: #ff4d88;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 77, 136, 0.25);
+    transition: transform 0.15s ease;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  /* Popup bubble */
+  .popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 182, 213, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .popup-box {
+    background: #fff;
+    padding: 24px;
+    border-radius: 22px;
+    max-width: 280px;
+    color: #ff4d88;
+    font-size: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  .popup-box button {
+    margin-top: 16px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>nothing suspicious here 🎀</h1>
+  <p>just click one… maybe all… who knows 👀</p>
+
+  <div class="buttons">
+    <button onclick="showNote(0)">Day 1</button>
+    <button onclick="showNote(1)">Day 2</button>
+    <button onclick="showNote(2)">Day 3</button>
+    <button onclick="showNote(3)">Day 4</button>
+    <button onclick="showNote(4)">Day 5</button>
+    <button onclick="showNote(5)">Day 6</button>
+    <button onclick="showNote(6)">Day 7</button>
+    <button onclick="showNote(7)">Day 8</button>
+    <button onclick="showNote(8)">Day 9</button>
+    <button onclick="showNote(9)">Day 10</button>
+    <button onclick="showNote(10)">Day 11</button>
+    <button onclick="showNote(11)">Day 12</button>
+    <button onclick="showNote(12)">Day 13</button>
+    <button onclick="goToMain()">Day 14 💌</button>
+  </div>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <div id="popup-text"></div>
+    <button onclick="closePopup()">okieee 🎀</button>
+  </div>
+</div>
+
+<script>
+  const notes = [
+    "I was going to wait till Valentine’s Day but I’m impatient when it comes to you 💕",
+    "If cuteness were illegal you’d be doing life 😤💗",
+    "This site is pink because thinking of you turns my brain soft 🎀",
+    "You make ordinary days feel suspiciously romantic 👀",
+    "I smile like an idiot every time your name pops up 📱💞",
+    "If this was a game I’d pick you every single round 🎮💗",
+    "You’re my favorite notification. Yes, even over food 🍰",
+    "Warning: affection levels increasing daily 💓",
+    "I pretend to be normal but then you exist 😌",
+    "You’re the reason I believe in cute coincidences ✨",
+    "Every countdown needs a reason… you’re mine 💕",
+    "This is me pretending I’m subtle about liking you 😇",
+    "Tomorrow is important. Very important. Trust me 👀💌"
+  ];
+
+  function showNote(index) {
+    document.getElementById("popup-text").innerText = notes[index];
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  function goToMain() {
+    window.location.href = "PASTE_YOUR_MAIN_SITE_LINK_HERE";
+  }
+</script>
+
+</body>
+</html>
